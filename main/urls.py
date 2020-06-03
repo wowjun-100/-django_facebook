@@ -15,7 +15,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from facebook.views import play, play2, my_profile, my_event, newsfeed, detail_feed, pages, new_feed, remove_feed, edit_feed, fail, page_new, edit_page, remove_page
+from facebook.views import play, play2, my_profile, my_event, newsfeed, detail_feed, pages, new_feed, remove_feed, remove_comment, edit_feed, fail, page_new, edit_page, remove_page
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -33,4 +33,5 @@ urlpatterns = [
     path('pages/new/', page_new),
     path('pages/<pk>/edit', edit_page),
     path('pages/<pk>/remove/', remove_page),
+    path('comment/<int:pk>/<int:comment_id>/', remove_comment)
 ]
