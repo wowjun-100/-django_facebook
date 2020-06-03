@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <title>뉴스피드</title>
+</head>
+<body>
+    {% for feed in articles %}
+     <div style="border:1px solid #b2b2b2; padding:10px; margin:10px;">
+     {{ feed.name }} - {{ feed.master }}({{ feed.category }})</br>
+     {{ feed.text }}</br>
+     - {{ feed.created_at }}
+     </div>
+    {% endfor %}
+
+</body>
+</html>
