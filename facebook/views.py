@@ -151,3 +151,6 @@ def remove_comment(request, comment_id, pk):
             return redirect('/fail/')
 
     return render(request, 'remove_comment.html', {'feed': article})
+
+def oauth(request):
+    return redirect('/')
